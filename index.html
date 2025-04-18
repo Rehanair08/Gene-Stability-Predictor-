@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Gene Stability Predictor</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="landing">
+  <div class="container">
+    <h1 id="typing-text"></h1>
+    <button onclick="location.href='input.html'">Next</button>
+  </div>
+  <script>
+    const text = "Predicting Gene Stability";
+    let index = 0;
+    function typeWriter() {
+      if (index < text.length) {
+        document.getElementById("typing-text").innerHTML += text.charAt(index);
+        index++;
+        setTimeout(typeWriter, 100);
+      }
+    }
+    window.onload = typeWriter;
+  </script>
+</body>
+</html>

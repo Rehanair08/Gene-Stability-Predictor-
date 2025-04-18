@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Prediction Results</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="result-page">
+  <div class="container">
+    <h1>Results</h1>
+    <pre id="output"></pre>
+    <button onclick="location.href='input.html'">Try Another</button>
+  </div>
+  <script>
+    document.getElementById('output').innerText = localStorage.getItem('prediction') || "No result found.";
+  </script>
+</body>
+</html>
